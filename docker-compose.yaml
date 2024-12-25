@@ -1,0 +1,19 @@
+# All rights reserved - 2024 @Hasibuzzaman
+# This file is a part of the Turtlebot3 Docker project.
+# No need further permission to use this file.
+# name: docker-compose.yaml
+# No need add any kind of version number here
+
+services:
+  turtlebot3:
+    image: turtlebot3_container  # Use the built image
+    privileged: true             # Required for hardware access
+    network_mode: "host"         # ROS2 requires host networking
+    environment:
+      - DISPLAY=host.docker.internal:0 # GUI support
+      - QT_X11_NO_MITSHM=1             # Fixes shared memory issue
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix  # X11 forwarding for GUI
+    stdin_open: true
+    tty: true
+    command: /bin/bash  # Open a bash shell by default

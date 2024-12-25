@@ -144,18 +144,20 @@ Space	Stop all motion (Emergency Halt)
 ---
 
 ## **Sensor Verification**
-### **Step 1: Check Active Topics**
+
 ```bash
+#Check Active Topics
 ros2 topic list
 ```
 
-### **Step 2: Monitor LIDAR Sensor Data**
 ```bash
+# Monitor LIDAR Sensor Data
 ros2 topic echo /scan
 ```
 
-### **Step 3: Verify Velocity Commands**
+
 ```bash
+# Verify Velocity Commands
 ros2 topic echo /cmd_vel
 ```
 

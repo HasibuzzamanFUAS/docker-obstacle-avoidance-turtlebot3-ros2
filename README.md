@@ -170,6 +170,12 @@ Key features include:
 Future extensions can include:
 - **Path planning algorithms** with start and goal nodes.
 - Deployment on **physical TurtleBot3 hardware**.
+  
+## References
+1. Gazebo Simulation Tutorials - https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/
+2. Python3 rocker - https://github.com/osrf/rocker
+3. Turtlebot3 teleop - https://github.com/ROBOTIS-GIT/turtlebot3/tree/humble-devel/turtlebot3_teleop
+4. Linux Implementation: https://github.com/vinay06vinay/Turtlebot3-Obstacle-Avoidance-ROS2
 
 > For any questions or contributions, feel free to raise an issue or pull request in the repository!
 

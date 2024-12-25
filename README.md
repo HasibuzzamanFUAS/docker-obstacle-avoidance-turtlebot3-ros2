@@ -8,13 +8,14 @@ This guide provides **step-by-step instructions** for setting up the project usi
 ---
 
 ## **Table of Contents**
-- [Requirements](#)
-- [Dependencies](#url)
-- [Installation Steps](#url)
-- [Running the Simulation](#url)
-- [Teleoperation Control](#url)
-- [Sensor Verification](#ur)
-- [Conclusion](#url)
+- [Requirements](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2?tab=readme-ov-file#requirements)
+- [Dependencies](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2?tab=readme-ov-file#dependencies)
+- [Installation Steps](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2?tab=readme-ov-file#installation-steps)
+- [Running the Simulation](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2?tab=readme-ov-file#running-the-simulation)
+- [Teleoperation Control](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2?tab=readme-ov-file#teleoperation-control)
+- [Sensor Verification](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2?tab=readme-ov-file#teleoperation-control)
+- [Conclusion](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2?tab=readme-ov-file#teleoperation-control)
+- [References](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2?tab=readme-ov-file#teleoperation-control)
 
 ---
 
@@ -81,6 +82,9 @@ set DISPLAY=host.docker.internal:0
 ### **Step 5: Start Docker Compose**
 ```bash
 docker-compose up -d
+
+# to see container runnig list
+docker ps
 ```
 Attach to the running container:
 ```bash
@@ -98,17 +102,15 @@ source install/setup.bash
 
 ## **Running the Simulation**
 
-### **Step 1: Launch Gazebo Simulation**
-```bash
-ros2 launch turtlebot3_gazebo turtlebot3_dqn_stage2.launch.py gui:=false
-```
-> Use `gui:=false` to run Gazebo in **headless mode** if GUI issues persist.
-
-### **Step 2: Run Obstacle Avoidance Algorithm**
+### **Step 1: Run Obstacle Avoidance Algorithm**
 ```bash
 ros2 launch obstacle_avoidance_tb3 launch.py
 ```
-
+### **Step 2: Launch Gazebo Simulation**
+```bash
+ros2 launch turtlebot3_gazebo turtlebot3_dqn_stage2.launch.py gui:=false
+```
+> Use `ros2 launch turtlebot3_gazebo turtlebot3_dqn_stage2.launch.py gui:=false` to run Gazebo in **headless mode** if GUI issues persist.
 ---
 
 ## **Teleoperation Control**

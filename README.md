@@ -48,7 +48,7 @@ docker build . -t turtlebot3_container
 ```
 Verify the image:
 ```bash
-docker images
+docker images ls
 ```
 Ensure the image **`turtlebot3_container`** appears in the list.
 

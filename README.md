@@ -108,7 +108,7 @@ ros2 launch obstacle_avoidance_tb3 launch.py
 ```
 ### **Step 2: Launch Gazebo Simulation**
 ```bash
-ros2 launch turtlebot3_gazebo turtlebot3_dqn_stage2.launch.py gui:=false
+ros2 launch turtlebot3_gazebo turtlebot3_dqn_stage2.launch.py
 ```
 > Use `ros2 launch turtlebot3_gazebo turtlebot3_dqn_stage2.launch.py gui:=false` to run Gazebo in **headless mode** if GUI issues persist.
 ---

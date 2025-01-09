@@ -14,6 +14,7 @@ This guide provides **step-by-step instructions** for setting up the project usi
 - [Running the Simulation](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2?tab=readme-ov-file#running-the-simulation)
 - [Teleoperation Control](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2?tab=readme-ov-file#teleoperation-control)
 - [Sensor Verification](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2?tab=readme-ov-file#teleoperation-control)
+- [Result](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2/blob/main/README.md#result)
 - [Conclusion](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2?tab=readme-ov-file#teleoperation-control)
 - [References](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2?tab=readme-ov-file#teleoperation-control)
 
@@ -48,7 +49,7 @@ docker build . -t turtlebot3_container
 ```
 Verify the image:
 ```bash
-docker images
+docker image ls
 ```
 Ensure the image **`turtlebot3_container`** appears in the list.
 
@@ -108,7 +109,7 @@ ros2 launch obstacle_avoidance_tb3 launch.py
 ```
 ### **Step 2: Launch Gazebo Simulation**
 ```bash
-ros2 launch turtlebot3_gazebo turtlebot3_dqn_stage2.launch.py gui:=false
+ros2 launch turtlebot3_gazebo turtlebot3_dqn_stage2.launch.py
 ```
 > Use `ros2 launch turtlebot3_gazebo turtlebot3_dqn_stage2.launch.py gui:=false` to run Gazebo in **headless mode** if GUI issues persist.
 ---
@@ -144,26 +145,34 @@ Space	Stop all motion (Emergency Halt)
 ---
 
 ## **Sensor Verification**
-### **Step 1: Check Active Topics**
+
 ```bash
+#Check Active Topics
 ros2 topic list
 ```
 
-### **Step 2: Monitor LIDAR Sensor Data**
 ```bash
+# Monitor LIDAR Sensor Data
 ros2 topic echo /scan
 ```
 
-### **Step 3: Verify Velocity Commands**
+
 ```bash
+# Verify Velocity Commands
 ros2 topic echo /cmd_vel
 ```
 
 ---
+## **Result**
+
+![image](https://github.com/user-attachments/assets/6ef69230-3b5a-4125-860f-059a1488eb04)
+
+
+![image](https://github.com/user-attachments/assets/ec78387d-003c-4d77-b76e-d3a53fd3d9f0)
+
 
 ## **Conclusion**
 This project successfully demonstrates how to implement an **Obstacle Avoidance Algorithm** for TurtleBot3 using **ROS2 Humble** and **Docker Compose**. By leveraging **Gazebo simulation**, the robot dynamically avoids obstacles using **LIDAR sensor data**.
-
 Key features include:
 - **Headless mode support** for lightweight execution.
 - **Teleoperation functionality** for manual control.

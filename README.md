@@ -15,8 +15,8 @@ This guide provides **step-by-step instructions** for setting up the project usi
 - [Teleoperation Control](#teleoperation-control)
 - [Sensor Verification](#teleoperation-control)
 - [Result](#result)
-- [Conclusion](#teleoperation-control)
-- [References](#teleoperation-control)
+- [Conclusion](#conclusion)
+- [References](#references)
 
 ---
 

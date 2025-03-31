@@ -1,0 +1,650 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\Users\HasibuzzamanHasibuzz> docker ps
+CONTAINER ID   IMAGE                  COMMAND                  CREATED          STATUS          PORTS     NAMES
+fbfb57d17f9f   turtlebot3_container   "/ros_entrypoint.sh …"   40 seconds ago   Up 39 seconds             obstacle-avoidance-turtlebot3-ros2-turtlebot3-1
+PS C:\Users\HasibuzzamanHasibuzz> docker exec -it obstacle-avoidance-turtlebot3-ros2-turtlebot3-1
+"docker exec" requires at least 2 arguments.
+See 'docker exec --help'.
+
+Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Execute a command in a running container
+PS C:\Users\HasibuzzamanHasibuzz> docker exec -it obstacle-avoidance-turtlebot3-ros2-turtlebot3-1 bash
+root@docker-desktop:/turtlebot3_ws# source install/setup.bash
+root@docker-desktop:/turtlebot3_ws# ros2 launch obstacle_avoidance_tb3 launch.py
+[INFO] [launch]: All log files can be found below /root/.ros/log/2025-03-19-12-52-29-824921-docker-desktop-517
+[INFO] [launch]: Default logging verbosity is set to INFO
+urdf_file_name : turtlebot3_waffle_pi.urdf
+urdf_file_name : turtlebot3_waffle_pi.urdf
+urdf_file_name : turtlebot3_waffle_pi.urdf
+[INFO] [gzserver-1]: process started with pid [518]
+[INFO] [gzclient-2]: process started with pid [520]
+[INFO] [robot_state_publisher-3]: process started with pid [522]
+[INFO] [spawn_entity.py-4]: process started with pid [524]
+[INFO] [obstacle_avoidance.py-5]: process started with pid [526]
+[robot_state_publisher-3] [INFO] [1742388753.194616072] [robot_state_publisher]: got segment base_footprint
+[robot_state_publisher-3] [INFO] [1742388753.194867833] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-3] [INFO] [1742388753.194896244] [robot_state_publisher]: got segment base_scan
+[robot_state_publisher-3] [INFO] [1742388753.194910969] [robot_state_publisher]: got segment camera_link
+[robot_state_publisher-3] [INFO] [1742388753.194924241] [robot_state_publisher]: got segment camera_rgb_frame
+[robot_state_publisher-3] [INFO] [1742388753.194937202] [robot_state_publisher]: got segment camera_rgb_optical_frame
+[robot_state_publisher-3] [INFO] [1742388753.194950164] [robot_state_publisher]: got segment caster_back_left_link
+[robot_state_publisher-3] [INFO] [1742388753.194962607] [robot_state_publisher]: got segment caster_back_right_link
+[robot_state_publisher-3] [INFO] [1742388753.194974738] [robot_state_publisher]: got segment imu_link
+[robot_state_publisher-3] [INFO] [1742388753.194987492] [robot_state_publisher]: got segment wheel_left_link
+[robot_state_publisher-3] [INFO] [1742388753.195002527] [robot_state_publisher]: got segment wheel_right_link
+[spawn_entity.py-4] [INFO] [1742388753.781121691] [spawn_entity]: Spawn Entity started
+[spawn_entity.py-4] [INFO] [1742388753.782026289] [spawn_entity]: Loading entity XML from file /opt/ros/humble/share/turtlebot3_gazebo/models/turtlebot3_waffle_pi/model.sdf
+[spawn_entity.py-4] [INFO] [1742388753.788650984] [spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[spawn_entity.py-4] [INFO] [1742388753.789686336] [spawn_entity]: Waiting for service /spawn_entity
+[spawn_entity.py-4] [ERROR] [1742388782.918875983] [spawn_entity]: Service %s/spawn_entity unavailable. Was Gazebo started with GazeboRosFactory?
+[spawn_entity.py-4] [ERROR] [1742388782.923039308] [spawn_entity]: Spawn service failed. Exiting.
+[ERROR] [spawn_entity.py-4]: process has died [pid 524, exit code 1, cmd '/opt/ros/humble/lib/gazebo_ros/spawn_entity.py -entity waffle_pi -file /opt/ros/humble/share/turtlebot3_gazebo/models/turtlebot3_waffle_pi/model.sdf -x 0.0 -y 0.0 -z 0.01 --ros-args'].
+[gzserver-1] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+[gzserver-1] ALSA lib conf.c:5178:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+[gzserver-1] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+[gzserver-1] ALSA lib conf.c:5178:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+[gzserver-1] ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
+[gzserver-1] ALSA lib conf.c:5178:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+[gzserver-1] ALSA lib conf.c:5701:(snd_config_expand) Evaluate error: No such file or directory
+[gzserver-1] ALSA lib pcm.c:2664:(snd_pcm_open_noupdate) Unknown PCM default
+[gzserver-1] AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+[gzserver-1] [INFO] [1742389231.616542029] [turtlebot3_imu]: <initial_orientation_as_reference> is unset, using default value of false to comply with REP 145 (world as orientation reference)
+[gzserver-1] [INFO] [1742389240.357433581] [camera_driver]: Publishing camera info to [/camera/camera_info]
+[gzserver-1] [INFO] [1742389240.662050478] [turtlebot3_diff_drive]: Wheel pair 1 separation set to [0.287000m]
+[gzserver-1] [INFO] [1742389240.662227194] [turtlebot3_diff_drive]: Wheel pair 1 diameter set to [0.066000m]
+[gzserver-1] [INFO] [1742389240.673613409] [turtlebot3_diff_drive]: Subscribed to [/cmd_vel]
+[gzserver-1] [INFO] [1742389240.688217308] [turtlebot3_diff_drive]: Advertise odometry on [/odom]
+[gzserver-1] [INFO] [1742389240.702233990] [turtlebot3_diff_drive]: Publishing odom transforms between [odom] and [base_footprint]
+[gzserver-1] [INFO] [1742389240.752286249] [turtlebot3_joint_state]: Going to publish joint [wheel_left_joint]
+[gzserver-1] [INFO] [1742389240.752455481] [turtlebot3_joint_state]: Going to publish joint [wheel_right_joint]
+[INFO] [gzclient-2]: process has finished cleanly [pid 520]
+^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[robot_state_publisher-3] [INFO] [1742389264.552432945] [rclcpp]: signal_handler(signum=2)
+[obstacle_avoidance.py-5] [WARN] [1742389264.768463756] [turtlebot_obstacle]: Keyboard interrupt detected
+[obstacle_avoidance.py-5] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:389
+[INFO] [robot_state_publisher-3]: process has finished cleanly [pid 522]
+[obstacle_avoidance.py-5] Traceback (most recent call last):
+[obstacle_avoidance.py-5]   File "/turtlebot3_ws/install/obstacle_avoidance_tb3/lib/obstacle_avoidance_tb3/obstacle_avoidance.py", line 96, in <module>
+[obstacle_avoidance.py-5]     main()
+[obstacle_avoidance.py-5]   File "/turtlebot3_ws/install/obstacle_avoidance_tb3/lib/obstacle_avoidance_tb3/obstacle_avoidance.py", line 92, in main
+[obstacle_avoidance.py-5]     rclpy.shutdown()
+[obstacle_avoidance.py-5]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 126, in shutdown
+[obstacle_avoidance.py-5]     _shutdown(context=context)
+[obstacle_avoidance.py-5]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/utilities.py", line 58, in shutdown
+[obstacle_avoidance.py-5]     return context.shutdown()
+[obstacle_avoidance.py-5]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/context.py", line 102, in shutdown
+[obstacle_avoidance.py-5]     self.__context.shutdown()
+[obstacle_avoidance.py-5] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:241
+[ERROR] [obstacle_avoidance.py-5]: process has died [pid 526, exit code 1, cmd '/turtlebot3_ws/install/obstacle_avoidance_tb3/lib/obstacle_avoidance_tb3/obstacle_avoidance.py --ros-args -r __node:=turtlebot_obstacle'].
+[INFO] [gzserver-1]: process has finished cleanly [pid 518]
+root@docker-desktop:/turtlebot3_ws# ros2 run obstacle_avoidance_tb3 turtlebot_teleop.py
+
+Control Your TurtleBot3!
+---------------------------
+Moving around:
+        w
+   a    s    d
+        x
+
+w/x : increase/decrease linear velocity (Burger : ~ 0.22, Waffle and Waffle Pi : ~ 0.26)
+a/d : increase/decrease angular velocity (Burger : ~ 2.84, Waffle and Waffle Pi : ~ 1.82)
+
+space key, s : force stop
+
+CTRL-C to quit
+
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.01     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.02     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.03     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.04     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.05     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.060000000000000005    angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.07     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.08     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.09     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.09999999999999999     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.10999999999999999     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.11999999999999998     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.12999999999999998     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.13999999999999999     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.15     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.16     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.17     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.18000000000000002     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.19000000000000003     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.20000000000000004     angular velocity 0.0
+
+Control Your TurtleBot3!
+---------------------------
+Moving around:
+        w
+   a    s    d
+        x
+
+w/x : increase/decrease linear velocity (Burger : ~ 0.22, Waffle and Waffle Pi : ~ 0.26)
+a/d : increase/decrease angular velocity (Burger : ~ 2.84, Waffle and Waffle Pi : ~ 1.82)
+
+space key, s : force stop
+
+CTRL-C to quit
+
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.20000000000000004     angular velocity 0.1
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.20000000000000004     angular velocity 0.2
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.20000000000000004     angular velocity 0.30000000000000004
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.20000000000000004     angular velocity 0.20000000000000004
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.20000000000000004     angular velocity 0.10000000000000003
+Key Pressed: X -> Robot Moving Reverse -> currently:    linear velocity 0.19000000000000003     angular velocity 0.10000000000000003
+Key Pressed: X -> Robot Moving Reverse -> currently:    linear velocity 0.18000000000000002     angular velocity 0.10000000000000003
+Key Pressed: X -> Robot Moving Reverse -> currently:    linear velocity 0.17     angular velocity 0.10000000000000003
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.17     angular velocity 0.20000000000000004
+Key Pressed: X -> Robot Moving Reverse -> currently:    linear velocity 0.16     angular velocity 0.20000000000000004
+Key Pressed: X -> Robot Moving Reverse -> currently:    linear velocity 0.15     angular velocity 0.20000000000000004
+Key Pressed: X -> Robot Moving Reverse -> currently:    linear velocity 0.13999999999999999     angular velocity 0.20000000000000004
+Key Pressed: X -> Robot Moving Reverse -> currently:    linear velocity 0.12999999999999998     angular velocity 0.20000000000000004
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.12999999999999998     angular velocity 0.10000000000000003
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.12999999999999998     angular velocity 2.7755575615628914e-17
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.12999999999999998     angular velocity -0.09999999999999998
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.12999999999999998     angular velocity 2.7755575615628914e-17
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.12999999999999998     angular velocity 0.10000000000000003
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.12999999999999998     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.13999999999999999     angular velocity 0.20000000000000004
+
+Control Your TurtleBot3!
+---------------------------
+Moving around:
+        w
+   a    s    d
+        x
+
+w/x : increase/decrease linear velocity (Burger : ~ 0.22, Waffle and Waffle Pi : ~ 0.26)
+a/d : increase/decrease angular velocity (Burger : ~ 2.84, Waffle and Waffle Pi : ~ 1.82)
+
+space key, s : force stop
+
+CTRL-C to quit
+
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.15     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.16     angular velocity 0.20000000000000004
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.16     angular velocity 0.10000000000000003
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.16     angular velocity 2.7755575615628914e-17
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.16     angular velocity -0.09999999999999998
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.16     angular velocity -0.19999999999999998
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.16     angular velocity -0.3
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.16     angular velocity -0.4
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.16     angular velocity -0.30000000000000004
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.16     angular velocity -0.20000000000000004
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.16     angular velocity -0.10000000000000003
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.16     angular velocity -2.7755575615628914e-17
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.16     angular velocity 0.09999999999999998
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.16     angular velocity 0.19999999999999998
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.16     angular velocity 0.3
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.16     angular velocity 0.4
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.16     angular velocity 0.5
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.16     angular velocity 0.4
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.16     angular velocity 0.30000000000000004
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.16     angular velocity 0.20000000000000004
+
+Control Your TurtleBot3!
+---------------------------
+Moving around:
+        w
+   a    s    d
+        x
+
+w/x : increase/decrease linear velocity (Burger : ~ 0.22, Waffle and Waffle Pi : ~ 0.26)
+a/d : increase/decrease angular velocity (Burger : ~ 2.84, Waffle and Waffle Pi : ~ 1.82)
+
+space key, s : force stop
+
+CTRL-C to quit
+
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.16     angular velocity 0.10000000000000003
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.16     angular velocity 2.7755575615628914e-17
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.16     angular velocity -0.09999999999999998
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.16     angular velocity -0.19999999999999998
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.16     angular velocity -0.3
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.16     angular velocity -0.4
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.16     angular velocity -0.30000000000000004
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.16     angular velocity -0.20000000000000004
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.16     angular velocity -0.10000000000000003
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.16     angular velocity -2.7755575615628914e-17
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.16     angular velocity 0.09999999999999998
+Key Pressed: S -> Robot Halted -> currently:    linear velocity 0.0      angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.01     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.02     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.03     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.04     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.05     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.060000000000000005    angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.07     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.08     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.09     angular velocity 0.0
+
+Control Your TurtleBot3!
+---------------------------
+Moving around:
+        w
+   a    s    d
+        x
+
+w/x : increase/decrease linear velocity (Burger : ~ 0.22, Waffle and Waffle Pi : ~ 0.26)
+a/d : increase/decrease angular velocity (Burger : ~ 2.84, Waffle and Waffle Pi : ~ 1.82)
+
+space key, s : force stop
+
+CTRL-C to quit
+
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.09999999999999999     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.10999999999999999     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.11999999999999998     angular velocity 0.0
+Key Pressed: S -> Robot Halted -> currently:    linear velocity 0.0      angular velocity 0.0
+Key Pressed: S -> Robot Halted -> currently:    linear velocity 0.0      angular velocity 0.0
+Key Pressed: S -> Robot Halted -> currently:    linear velocity 0.0      angular velocity 0.0
+Key Pressed: S -> Robot Halted -> currently:    linear velocity 0.0      angular velocity 0.0
+Key Pressed: S -> Robot Halted -> currently:    linear velocity 0.0      angular velocity 0.0
+Key Pressed: S -> Robot Halted -> currently:    linear velocity 0.0      angular velocity 0.0
+Key Pressed: S -> Robot Halted -> currently:    linear velocity 0.0      angular velocity 0.0
+Key Pressed: S -> Robot Halted -> currently:    linear velocity 0.0      angular velocity 0.0
+Key Pressed: S -> Robot Halted -> currently:    linear velocity 0.0      angular velocity 0.0
+Key Pressed: X -> Robot Moving Reverse -> currently:    linear velocity -0.01    angular velocity 0.0
+Key Pressed: X -> Robot Moving Reverse -> currently:    linear velocity -0.02    angular velocity 0.0
+Key Pressed: X -> Robot Moving Reverse -> currently:    linear velocity -0.03    angular velocity 0.0
+Key Pressed: X -> Robot Moving Reverse -> currently:    linear velocity -0.04    angular velocity 0.0
+Key Pressed: X -> Robot Moving Reverse -> currently:    linear velocity -0.05    angular velocity 0.0
+Key Pressed: X -> Robot Moving Reverse -> currently:    linear velocity -0.060000000000000005   angular velocity 0.0
+Key Pressed: X -> Robot Moving Reverse -> currently:    linear velocity -0.07    angular velocity 0.0
+Key Pressed: X -> Robot Moving Reverse -> currently:    linear velocity -0.08    angular velocity 0.0
+Key Pressed: X -> Robot Moving Reverse -> currently:    linear velocity -0.09    angular velocity 0.0
+Key Pressed: X -> Robot Moving Reverse -> currently:    linear velocity -0.09999999999999999    angular velocity 0.0
+Key Pressed: X -> Robot Moving Reverse -> currently:    linear velocity -0.10999999999999999    angular velocity 0.0
+Key Pressed: X -> Robot Moving Reverse -> currently:    linear velocity -0.11999999999999998    angular velocity 0.0
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity -0.11999999999999998    angular velocity 0.1
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity -0.11999999999999998    angular velocity 0.2
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity -0.11999999999999998    angular velocity 0.30000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity -0.10999999999999999    angular velocity 0.30000000000000004
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity -0.10999999999999999    angular velocity 0.20000000000000004
+
+Control Your TurtleBot3!
+---------------------------
+Moving around:
+        w
+   a    s    d
+        x
+
+w/x : increase/decrease linear velocity (Burger : ~ 0.22, Waffle and Waffle Pi : ~ 0.26)
+a/d : increase/decrease angular velocity (Burger : ~ 2.84, Waffle and Waffle Pi : ~ 1.82)
+
+space key, s : force stop
+
+CTRL-C to quit
+
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity -0.10999999999999999    angular velocity 0.10000000000000003
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity -0.10999999999999999    angular velocity 2.7755575615628914e-17
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity -0.10999999999999999    angular velocity -0.09999999999999998
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity -0.10999999999999999    angular velocity -0.19999999999999998
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity -0.09999999999999999    angular velocity -0.19999999999999998
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity -0.09    angular velocity -0.19999999999999998
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity -0.08    angular velocity -0.19999999999999998
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity -0.07    angular velocity -0.19999999999999998
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity -0.060000000000000005   angular velocity -0.19999999999999998
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity -0.05    angular velocity -0.19999999999999998
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity -0.04    angular velocity -0.19999999999999998
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity -0.03    angular velocity -0.19999999999999998
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity -0.019999999999999997   angular velocity -0.19999999999999998
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity -0.019999999999999997   angular velocity -0.09999999999999998
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity -0.019999999999999997   angular velocity 2.7755575615628914e-17
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity -0.019999999999999997   angular velocity 0.10000000000000003
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity -0.019999999999999997   angular velocity 0.20000000000000004
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity -0.019999999999999997   angular velocity 0.30000000000000004
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity -0.019999999999999997   angular velocity 0.4
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity -0.019999999999999997   angular velocity 0.5
+
+Control Your TurtleBot3!
+---------------------------
+Moving around:
+        w
+   a    s    d
+        x
+
+w/x : increase/decrease linear velocity (Burger : ~ 0.22, Waffle and Waffle Pi : ~ 0.26)
+a/d : increase/decrease angular velocity (Burger : ~ 2.84, Waffle and Waffle Pi : ~ 1.82)
+
+space key, s : force stop
+
+CTRL-C to quit
+
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity -0.019999999999999997   angular velocity 0.6
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity -0.019999999999999997   angular velocity 0.7
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity -0.019999999999999997   angular velocity 0.7999999999999999
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity -0.019999999999999997   angular velocity 0.7
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity -0.019999999999999997   angular velocity 0.6
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity -0.019999999999999997   angular velocity 0.5
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity -0.009999999999999997   angular velocity 0.5
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 3.469446951953614e-18   angular velocity 0.5
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.010000000000000004    angular velocity 0.5
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.010000000000000004    angular velocity 0.4
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.010000000000000004    angular velocity 0.30000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.020000000000000004    angular velocity 0.30000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.030000000000000006    angular velocity 0.30000000000000004
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.030000000000000006    angular velocity 0.20000000000000004
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.030000000000000006    angular velocity 0.10000000000000003
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.04000000000000001     angular velocity 0.10000000000000003
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.05000000000000001     angular velocity 0.10000000000000003
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.06000000000000001     angular velocity 0.10000000000000003
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.07     angular velocity 0.10000000000000003
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.08     angular velocity 0.10000000000000003
+
+Control Your TurtleBot3!
+---------------------------
+Moving around:
+        w
+   a    s    d
+        x
+
+w/x : increase/decrease linear velocity (Burger : ~ 0.22, Waffle and Waffle Pi : ~ 0.26)
+a/d : increase/decrease angular velocity (Burger : ~ 2.84, Waffle and Waffle Pi : ~ 1.82)
+
+space key, s : force stop
+
+CTRL-C to quit
+
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.09     angular velocity 0.10000000000000003
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.09999999999999999     angular velocity 0.10000000000000003
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.10999999999999999     angular velocity 0.10000000000000003
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.11999999999999998     angular velocity 0.10000000000000003
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.12999999999999998     angular velocity 0.10000000000000003
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.13999999999999999     angular velocity 0.10000000000000003
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.15     angular velocity 0.10000000000000003
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.16     angular velocity 0.10000000000000003
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.17     angular velocity 0.10000000000000003
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.18000000000000002     angular velocity 0.10000000000000003
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.19000000000000003     angular velocity 0.10000000000000003
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.19000000000000003     angular velocity 0.20000000000000004
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.19000000000000003     angular velocity 0.30000000000000004
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.19000000000000003     angular velocity 0.20000000000000004
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.19000000000000003     angular velocity 0.10000000000000003
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.19000000000000003     angular velocity 2.7755575615628914e-17
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.19000000000000003     angular velocity -0.09999999999999998
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.19000000000000003     angular velocity -0.19999999999999998
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.19000000000000003     angular velocity -0.09999999999999998
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.19000000000000003     angular velocity 2.7755575615628914e-17
+
+Control Your TurtleBot3!
+---------------------------
+Moving around:
+        w
+   a    s    d
+        x
+
+w/x : increase/decrease linear velocity (Burger : ~ 0.22, Waffle and Waffle Pi : ~ 0.26)
+a/d : increase/decrease angular velocity (Burger : ~ 2.84, Waffle and Waffle Pi : ~ 1.82)
+
+space key, s : force stop
+
+CTRL-C to quit
+
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.19000000000000003     angular velocity 0.10000000000000003
+Key Pressed: S -> Robot Halted -> currently:    linear velocity 0.0      angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.01     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.02     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.03     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.04     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.05     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.060000000000000005    angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.07     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.08     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.09     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.09999999999999999     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.10999999999999999     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.11999999999999998     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.12999999999999998     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.13999999999999999     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.15     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.16     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.17     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.18000000000000002     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.19000000000000003     angular velocity 0.0
+
+Control Your TurtleBot3!
+---------------------------
+Moving around:
+        w
+   a    s    d
+        x
+
+w/x : increase/decrease linear velocity (Burger : ~ 0.22, Waffle and Waffle Pi : ~ 0.26)
+a/d : increase/decrease angular velocity (Burger : ~ 2.84, Waffle and Waffle Pi : ~ 1.82)
+
+space key, s : force stop
+
+CTRL-C to quit
+
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.20000000000000004     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.21000000000000005     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.22000000000000006     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.23000000000000007     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.24000000000000007     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.25000000000000006     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.0
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.0
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.1
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.2
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.30000000000000004
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.4
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.30000000000000004
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.10000000000000003
+dKey Pressed: D -> Robot Moving Right -> currently:     linear velocity 0.26     angular velocity 2.7755575615628914e-17
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.10000000000000003
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.30000000000000004
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.4
+
+Control Your TurtleBot3!
+---------------------------
+Moving around:
+        w
+   a    s    d
+        x
+
+w/x : increase/decrease linear velocity (Burger : ~ 0.22, Waffle and Waffle Pi : ~ 0.26)
+a/d : increase/decrease angular velocity (Burger : ~ 2.84, Waffle and Waffle Pi : ~ 1.82)
+
+space key, s : force stop
+
+CTRL-C to quit
+
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.5
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.4
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.30000000000000004
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.30000000000000004
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.4
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.5
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.4
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.30000000000000004
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.10000000000000003
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 2.7755575615628914e-17
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity -0.09999999999999998
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity -0.19999999999999998
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity -0.3
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity -0.19999999999999998
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity -0.09999999999999998
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 2.7755575615628914e-17
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.10000000000000003
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.20000000000000004
+
+Control Your TurtleBot3!
+---------------------------
+Moving around:
+        w
+   a    s    d
+        x
+
+w/x : increase/decrease linear velocity (Burger : ~ 0.22, Waffle and Waffle Pi : ~ 0.26)
+a/d : increase/decrease angular velocity (Burger : ~ 2.84, Waffle and Waffle Pi : ~ 1.82)
+
+space key, s : force stop
+
+CTRL-C to quit
+
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.10000000000000003
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.30000000000000004
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.4
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.30000000000000004
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.4
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.5
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.4
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.30000000000000004
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+
+Control Your TurtleBot3!
+---------------------------
+Moving around:
+        w
+   a    s    d
+        x
+
+w/x : increase/decrease linear velocity (Burger : ~ 0.22, Waffle and Waffle Pi : ~ 0.26)
+a/d : increase/decrease angular velocity (Burger : ~ 2.84, Waffle and Waffle Pi : ~ 1.82)
+
+space key, s : force stop
+
+CTRL-C to quit
+
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+
+Control Your TurtleBot3!
+---------------------------
+Moving around:
+        w
+   a    s    d
+        x
+
+w/x : increase/decrease linear velocity (Burger : ~ 0.22, Waffle and Waffle Pi : ~ 0.26)
+a/d : increase/decrease angular velocity (Burger : ~ 2.84, Waffle and Waffle Pi : ~ 1.82)
+
+space key, s : force stop
+
+CTRL-C to quit
+
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.20000000000000004
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.30000000000000004
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.4
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.5
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.6
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.7
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.7999999999999999
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.8999999999999999
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.9999999999999999
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 1.0999999999999999
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 1.2
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 1.3
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 1.4000000000000001
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 1.5000000000000002
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 1.4000000000000001
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 1.3
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 1.2
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 1.0999999999999999
+
+Control Your TurtleBot3!
+---------------------------
+Moving around:
+        w
+   a    s    d
+        x
+
+w/x : increase/decrease linear velocity (Burger : ~ 0.22, Waffle and Waffle Pi : ~ 0.26)
+a/d : increase/decrease angular velocity (Burger : ~ 2.84, Waffle and Waffle Pi : ~ 1.82)
+
+space key, s : force stop
+
+CTRL-C to quit
+
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.9999999999999999
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.8999999999999999
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.7999999999999999
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.7
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.6
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.5
+Key Pressed: D -> Robot Moving Right -> currently:      linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+
+Control Your TurtleBot3!
+---------------------------
+Moving around:
+        w
+   a    s    d
+        x
+
+w/x : increase/decrease linear velocity (Burger : ~ 0.22, Waffle and Waffle Pi : ~ 0.26)
+a/d : increase/decrease angular velocity (Burger : ~ 2.84, Waffle and Waffle Pi : ~ 1.82)
+
+space key, s : force stop
+
+CTRL-C to quit
+
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: W -> Robot Moving Forward -> currently:    linear velocity 0.26     angular velocity 0.4
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.5
+Key Pressed: A -> Robot Moving Left -> currently:       linear velocity 0.26     angular velocity 0.6
+Key Pressed: S -> Robot Halted -> currently:    linear velocity 0.0      angular velocity 0.0

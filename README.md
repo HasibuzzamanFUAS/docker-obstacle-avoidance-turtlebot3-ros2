@@ -8,15 +8,15 @@ This guide provides **step-by-step instructions** for setting up the project usi
 ---
 
 ## **Table of Contents**
-- [Requirements](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2?tab=readme-ov-file#requirements)
-- [Dependencies](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2?tab=readme-ov-file#dependencies)
-- [Installation Steps](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2?tab=readme-ov-file#installation-steps)
-- [Running the Simulation](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2?tab=readme-ov-file#running-the-simulation)
-- [Teleoperation Control](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2?tab=readme-ov-file#teleoperation-control)
-- [Sensor Verification](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2?tab=readme-ov-file#teleoperation-control)
-- [Result](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2/blob/main/README.md#result)
-- [Conclusion](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2?tab=readme-ov-file#teleoperation-control)
-- [References](https://github.com/HasibuzzamanFUAS/docker-obstacle-avoidance-turtlebot3-ros2?tab=readme-ov-file#teleoperation-control)
+- [Requirements](#requirements)
+- [Dependencies](#dependencies)
+- [Installation Steps](#installation-steps)
+- [Running the Simulation](#running-the-simulation)
+- [Teleoperation Control](#teleoperation-control)
+- [Sensor Verification](#teleoperation-control)
+- [Result](#result)
+- [Conclusion](#conclusion)
+- [References](#references)
 
 ---
 
